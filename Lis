@@ -24,7 +24,7 @@ public class LIS{
 		        arr[i] = x;
 		        if (i == size) 
 		        {
-		        	++size;
+		        	size++;
 		        }
 		    }
 		    System.out.print(size);;
