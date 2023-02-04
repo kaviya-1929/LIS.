@@ -1,0 +1,32 @@
+
+public class LIS{
+
+	public static void main(String[] args) {
+	
+	      int nums[]= {1,2,3,4,5,6,7,8,9,10};
+		  int[] arr = new int[nums.length];
+		    int size = 0;
+		    for (int x : nums) 
+		    {
+		        int i = 0, j = size;
+		        while (i != j) 
+		        {
+		            int m = (i + j) / 2;
+		            if (arr[m] < x)
+		            {
+		                i = m + 1;
+		            }
+		            else
+		            {
+		                j = m;
+		            }
+		        }
+		        arr[i] = x;
+		        if (i == size) 
+		        {
+		        	++size;
+		        }
+		    }
+		    System.out.print(size);;
+	}
+}
